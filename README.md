@@ -1,16 +1,23 @@
-# api_integration
+# Flutter API Integration
 
-A new Flutter project.
+This Flutter project demonstrates API integration in Flutter using various HTTP methods, including GET, POST, PUT, and DELETE. It interacts with a sample API provided by [Typicode](https://jsonplaceholder.typicode.com/todos) to manage tasks.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+- **Home Screen (Final Output)**  
+  <img src="Screenshots/S1.PNG" alt="Screenshot 1" width="400" height="600">
 
-A few resources to get you started if this is your first Flutter project:
+- **API Endpoint from Typicode**  
+  <img src="Screenshots/S2.PNG" alt="Screenshot 2" width="500" height="200">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Fetching Tasks from API**  
+  <img src="Screenshots/S3.PNG" alt="Screenshot 3" width="450" height="400">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Creating a New Task**  
+  <img src="Screenshots/S4.PNG" alt="Screenshot 4" width="400" height="400">
+
+- **Updating a Task**  
+  <img src="Screenshots/S5.PNG" alt="Screenshot 5" width="450" height="400">
+
+- **Deleting a Task**  
+  <img src="Screenshots/S6.PNG" alt="Screenshot 6" width="450" height="400">
