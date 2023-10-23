@@ -28,7 +28,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
   @override
   void initState() {
     super.initState();
-    fetchTasks();
+    fetchTasks(); // Initialize tasks when the widget is created.
   }
 
   Future<void> fetchTasks() async {
@@ -36,7 +36,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
 
     if (response.statusCode == 200) {
       setState(() {
-        tasks = jsonDecode(response.body);
+        tasks = jsonDecode(response.body); // Update the tasks list.
       });
     } else {
       throw Exception('Failed to load tasks');
@@ -56,7 +56,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
     );
 
     if (response.statusCode == 201) {
-      fetchTasks();
+      fetchTasks(); // Refresh the task list after creating a task.
     } else {
       throw Exception('Failed to create task');
     }
@@ -74,7 +74,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
     );
 
     if (response.statusCode == 200) {
-      fetchTasks();
+      fetchTasks(); // Refresh the task list after updating a task.
     } else {
       throw Exception('Failed to update task');
     }
@@ -89,7 +89,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
     );
 
     if (response.statusCode == 200) {
-      fetchTasks();
+      fetchTasks(); // Refresh the task list after deleting a task.
     } else {
       throw Exception('Failed to delete task');
     }
@@ -110,18 +110,18 @@ class _TaskListScreenState extends State<TaskListScreen> {
             leading: Checkbox(
               value: task['completed'],
               onChanged: (bool? newValue) {
-  if (newValue != null) {
-    setState(() {
-      task['completed'] = newValue;
-    });
-    updateTask(task['id']);
-  }
-},
+                if (newValue != null) {
+                  setState(() {
+                    task['completed'] = newValue;
+                  });
+                  updateTask(task['id']); // Update the task's completion status.
+                }
+              },
             ),
             trailing: IconButton(
               icon: Icon(Icons.delete),
               onPressed: () {
-                deleteTask(task['id']);
+                deleteTask(task['id']); // Delete the task.
               },
             ),
           );
@@ -129,7 +129,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          createTask();
+          createTask(); // Create a new task.
         },
         child: Icon(Icons.add),
       ),
